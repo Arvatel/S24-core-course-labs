@@ -16,3 +16,17 @@
 * Use virtual environment for isolated development
 * Use .gitignore to avoid uploading unnecessary files that can be retrieved from
 * Include a requirements.txt file for dependencies
+
+## Unit tests
+Unit tests have been added to the project. 
+
+Tests include testing of:
+* Getting time
+* Time formating
+* Workflow
+
+Tests use the unittest library
+
+## Best practices implemented
+* Flask HTML templating - allows dynamic content rendering and helps separate frontend and backend
+* Separation of the main sections of the app - backend logic in the 'main.py', while templates used for frontend in the separate folder

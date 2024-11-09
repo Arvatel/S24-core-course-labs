@@ -10,7 +10,7 @@ USER pythonuser
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY app.py /app/app.py
+COPY app/main.py /app/main.py
 COPY templates/index.html /app/templates/index.html
 COPY requirements.txt /app/requirements.txt
 
@@ -21,7 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Define environment variable
-ENV FLASK_APP=app.py
+ENV FLASK_APP=main.py
 
 # Run app.py when the container launches
 CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]

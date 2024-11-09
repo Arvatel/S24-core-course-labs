@@ -56,3 +56,14 @@ docker pull letavra/lab2:v1
 ```bash
 docker run -p 5000:5000 letavra/lab2:v1
 ```
+
+
+## Unit tests
+Unit tests have been added to the project. 
+
+Tests include testing of:
+* Getting time
+* Time formating
+* Workflow
+
+Tests use the unittest library
