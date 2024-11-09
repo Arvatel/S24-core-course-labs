@@ -35,3 +35,24 @@ flask run
   * `app.py`: Flask application
   * `templates/`: HTML templates
   * `requirements.txt`: Python app requirements
+
+
+## Docker
+
+### Build the Docker Image
+
+```bash
+docker build -t lab2 .
+```
+
+### Pull the Docker Image
+
+```bash
+docker pull letavra/lab2:v1
+```
+
+### Run the Docker Image
+
+```bash
+docker run -p 5000:5000 letavra/lab2:v1
+```
