@@ -52,8 +52,8 @@ jobs:
         docker build -t lab3:latest .
     - name: Push Docker image
       run: |
-        docker tag lab2:latest ${{ secrets.DOCKERHUB_USERNAME }}/lab2:latest
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/lab2:latest
+        docker tag lab3:latest ${{ secrets.DOCKERHUB_USERNAME }}/lab2:v1
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/lab2:v1
   security:
     runs-on: ubuntu-latest
     steps:
