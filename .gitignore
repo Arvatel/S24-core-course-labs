@@ -1,0 +1,11 @@
+app_python/env/
+env/
+pycache
+../venv
+*.pyc
+*.pyo
+*.pyd
+
+terraform/.terraform
+terraform/docker/.terraform/
+.terraform
