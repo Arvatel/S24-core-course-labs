@@ -10,7 +10,7 @@ USER pythonuser
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY app/main.py /app/main.py
+COPY main.py /app/main.py
 COPY templates/index.html /app/templates/index.html
 COPY requirements.txt /app/requirements.txt
 
