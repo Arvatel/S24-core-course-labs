@@ -8,7 +8,6 @@ import pytz
 class AppTest(unittest.TestCase):
     TEST_TIMEZONE = "Europe/Moscow"
     def test_time(self):
-        
         assert (app.get_time(pytz.timezone(app.TIMEZONE)) -
                 datetime.now(pytz.timezone(TEST_TIMEZONE)) <
                 timedelta(seconds=1))
