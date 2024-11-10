@@ -2,10 +2,10 @@ from flask import Flask, render_template
 from datetime import datetime
 import pytz
 
+app = Flask(__name__)
+
 TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 TIMEZONE = "Europe/Moscow"
-
-app = Flask(__name__)
 
 
 def get_time(timezone):
