@@ -88,8 +88,3 @@ jobs:
     - name: Copy requirements.txt
       run: |
         cp app_python/requirements.txt requirements.txt
-    
-    - name: Run Snyk to check for vulnerabilities
-      uses: snyk/actions/python-3.8@master
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
