@@ -1,0 +1,13 @@
+- name: Get OS type
+  command: uname -s
+  register: os_type
+
+- name: Get architecture type
+  command: uname -m
+  register: arch_type
+
+- name: Install Docker Compose
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ os_type.stdout }}-{{ arch_type.stdout }}"
+    dest: /usr/local/bin/docker-compose
+    mode: '0755'

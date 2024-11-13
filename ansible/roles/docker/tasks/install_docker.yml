@@ -1,0 +1,16 @@
+- name: Update pacman cache
+  pacman:
+    update_cache: yes
+
+- name: Install required packages for Docker
+  pacman:
+    name:
+      - docker
+      - git
+    state: present
+
+- name: Ensure Docker service is started and enabled
+  service:
+    name: docker
+    state: started
+    enabled: yes
