@@ -1,0 +1,35 @@
+- name: app_python web app
+  hosts: localhost
+  connection: local
+  become: true
+
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+  tasks:
+    - name: Ensure pip is installed
+      ansible.builtin.pacman:
+        name: python-pip
+        state: present
+
+    - name: Upgrade pip
+      ansible.builtin.command: pip install --upgrade pip
+      args:
+        creates: /usr/bin/pip  # Ensures pip is available before running
+
+    - name: Install Docker via pacman
+      ansible.builtin.pacman:
+        name: 
+          - docker
+          - docker-compose
+        state: present
+
+    - name: Start and enable Docker service
+      ansible.builtin.systemd:
+        name: docker
+        state: started
+        enabled: true
+
+  roles:
+    - role: ../../roles/docker
+    - role: ../../roles/web_app
