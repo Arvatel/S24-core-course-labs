@@ -123,3 +123,14 @@ tolerations: []
 affinity: {}
 
 password: super-password
+
+
+# Additional volumeMounts on the output Deployment definition.
+volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
