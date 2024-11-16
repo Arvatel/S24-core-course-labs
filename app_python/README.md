@@ -67,3 +67,11 @@ Tests include testing of:
 * Workflow
 
 Tests use the unittest library
+
+## lab 12
+
+### added visitc count - http://127.0.0.1:5000/visits
+
+### checked file on updates
+#### sudo cat /var/lib/docker/volumes/app_python_data/_data/visits  
+2

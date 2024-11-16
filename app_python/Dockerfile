@@ -2,12 +2,15 @@
 FROM python:3-alpine3.15
 LABEL authors="arvatel"
 
-# Create a non-root user
-RUN adduser -D pythonuser
-USER pythonuser
-
 # Set the working directory in the container
 WORKDIR /app
+
+# Create a non-root user
+RUN adduser -D pythonuser
+
+RUN mkdir data && chown pythonuser data
+
+USER pythonuser
 
 # Copy the current directory contents into the container at /app
 COPY main.py /app/main.py
